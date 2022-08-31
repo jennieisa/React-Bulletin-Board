@@ -7,7 +7,7 @@ const Post = ({question, answer, liked, index, isLiked}) => {
             <p>Question: {question}</p>
             <p>Answer: {answer}</p>
             {!liked ? 
-                (<button onClick={() => isLiked(index)}>{`${liked}`}</button>) 
+                (<button onClick={() => isLiked(index)}>Like</button>) 
                 : <PostLiked />
             }
         </article>
