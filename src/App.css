@@ -1,18 +1,38 @@
+* {
+  margin: 0px;
+}
+
 .App {
+  background-image: url(../public/josephine-bredehoft-KsAo8ouBn8A-unsplash\ \(1\).jpg);
+  background-size: cover;
   text-align: center;
+  color: white;
 }
 
 .bulletinBoard {
+  background-image: url(../public/josephine-bredehoft-KsAo8ouBn8A-unsplash\ \(1\).jpg);
+  background-size: cover;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
+  width: 100%
 }
 
 .postCard {
-  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 350px;
   height: 300px;
-  background-color: beige;
+  background-color: rgb(255, 255, 130);
+  color: black;
+  box-shadow: 5px 5px 10px rgb(50, 49, 49);
   margin: 20px;
   padding: 10px;
+}
+
+.question {
+  font-size: 20px;
 }

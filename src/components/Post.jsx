@@ -4,10 +4,10 @@ const Post = ({question, answer, liked, index, isLiked}) => {
 
     return (
         <article className="postCard">
-            <p>Question: {question}</p>
-            <p>Answer: {answer}</p>
+            <p className="question">Question: {question}</p>
+            <p className="answer">Answer: {answer}</p>
             {!liked ? 
-                (<button onClick={() => isLiked(index)}>Like</button>) 
+                (<button className="likeBtn" onClick={() => isLiked(index)}>Like</button>) 
                 : <PostLiked />
             }
         </article>
