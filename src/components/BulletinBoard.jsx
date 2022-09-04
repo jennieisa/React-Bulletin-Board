@@ -4,27 +4,45 @@ import Post from './Post';
 const BulletinBoard = () => {
     const [myPosts, setMyPosts] = useState([
         {
-            question: "Lorem ipsum dolor sit amet 1.",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam arcu purus, tempus non semper eu, luctus vel lectus. Pellentesque volutpat facilisis nibh, quis tincidunt ex euismod et. Aenean in eros iaculis, auctor sem bibendum, commodo lectus. Suspendisse porttitor eu tellus a pharetra.",
+            question: "Nämn tre fördelar med att använda React?",
+            answer: `När vi använder oss av React jobbar vi med komponenter. 
+                    Komponenter kan man göra väldigt smidiga genom att koda dem
+                    på så sätt att de blir återanvändbara. Vi kan då använda till 
+                    exempel samma header på flera ställen och vill vi flytta den någon 
+                    gång så är det väldigt enkelt att göra det. Vi flyttar då bara själva 
+                    komponentens element och inte en massa kod. React är väldigt flexibelt 
+                    och tillåter oss att använda andra bibliotek tillsammans med React. Vi 
+                    måste inte heller använda React på hela sidan även om det är mest fördelaktigt
+                    för oss. React har en virituell DOM som synkoroniserar med den riktiga DOM:en. 
+                    Så när vi säger till VDOM att ha ett visst tillstånd så ser den till att den 
+                    riktiga DOM:en har det också. Detta gör att vi slipper manuellt uppdatera DOM:en, vilket oftast
+                    också behöver göras flera gånger (går långsammare) än med React då vi endast uppdaterar 
+                    den komponent vars tilstånd ändras.`,
             id: 1,
             liked: false,
         },
         {
-            question: "Lorem ipsum dolor sit amet 2.",
-            answer: " Nullam porta consectetur elit sit amet fringilla. Vivamus aliquam consequat mattis. Sed quis ipsum sed magna consectetur dapibus sit amet id enim. Cras sit amet leo a sem consequat vulputate. Ut viverra nec metus et placerat. Vivamus congue nibh sit amet leo tincidunt, ut pharetra nunc laoreet.",
+            question: "Vad betyder Single Page Application och vad skiljer det från en “vanlig” webbplats?",
+            answer: `När vi har en SPA så laddas endat ett enskilt dokument och sedan uppdateras 
+                    det med hjälp av JavaScript. Så när man till exempel scrollar eller klickar på något så 
+                    uppdateras sidan de elementen som ska uppdateras dynamiskt. En applikation med flera sidor (MPA) renderar en ny 
+                    sida varje gång vi till exempel vill visa ny data eller skicka vidare data.`,
             id: 2,
             liked: false,
         },
         {
-            question: "Lorem ipsum dolor sit amet 3.",
-            answer: "Duis in libero arcu. Nam sit amet metus ullamcorper, feugiat velit non, dictum velit. Integer blandit faucibus auctor. Ut felis turpis, malesuada vel rhoncus et, malesuada sit amet libero. Proin et dolor vitae justo luctus semper. Aenean vitae lectus est.",
+            question: "Nämn tre skillnader mellan React och Angular.",
+            answer: `Angular är ett ramverk som bestämmer hur din applikation ska
+                    se ut medan React är ett bibliotek som ger dig mer flexibilitet 
+                    i hur applikationen ska se ut. Angular har mer inbyggd funktionalitet
+                    så att du endast kan använda det medan du kan använda flera andra bibliotek
+                    med React. Man kodar i TypeScript när man använder Angular. Med React kodar
+                    man i JSX och JavaScript. Angular använder sig av tvåvägs databindning och
+                    React använder sig av envägs databindning. Tvåvägs databindning betyder att 
+                    datan kan flödas två vägar, till exempel från JavaScript filen till HTML filen och tvärtom.
+                    Medan envägs databindning endast kan flöda åt ett håll vilket är nedåt, 
+                    till exempel från JavaScript filen till HTML filen. `,
             id: 3,
-            liked: false,
-        },
-        {
-            question: "Lorem ipsum dolor sit amet 4.",
-            answer: "Integer ac velit quam. Ut iaculis lacus nulla, vitae lobortis eros cursus ac. Curabitur vehicula nibh pharetra egestas tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque et dolor sit amet odio tristique auctor id ut ante.",
-            id: 4,
             liked: false,
         },
     ]);
@@ -37,7 +55,7 @@ const BulletinBoard = () => {
 
     console.log(myPosts);
 
-    return ( //Returnerar html
+    return (
         <main className='bulletinBoard'>
             {myPosts.map((post, key) => {
                 return (
